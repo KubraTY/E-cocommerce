@@ -3,8 +3,9 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav>
-      <div className="logo">Cocommerce</div>
-      
+      <div>
+        <h1>My React App</h1>
+      </div>
     </nav>
   );
 };
