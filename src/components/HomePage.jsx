@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div>
-      <h2>Welcome to the Home Page!</h2>
+      <h2>Home Page!</h2>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
