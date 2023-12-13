@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductListItem from './ProductListItem';
+import ProductListItem from '../components/ProductListItem';
 import productsData from '../assets/data/products.json';
 import { useParams } from 'react-router-dom';
 
