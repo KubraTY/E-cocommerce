@@ -1,33 +1,10 @@
-/*import React, { useState } from 'react';
-import ProductList from '../components/ProductList';
-import productsData from '../assets/data/products.json';
-
-const Home = () => {
-  const [products, setProducts] = useState(productsData);
-
-  const handleDelete = (id) => {
-    const updatedProducts = products.filter((product) => product.id !== id);
-    setProducts(updatedProducts);
-  };
-
-  return (
-    <div>
-      <h2>Home Page!</h2>
-      <ProductList products={products} onDelete={handleDelete} />
-    </div>
-  );
-};
-
-export default Home;
-*/
-
 import React, { useState } from 'react';
+import NewItemForm from '../components/NewItemForm';
+import EditItemForm from '../components/EditItemForm';
 import ProductList from '../components/ProductList';
-import NewItemForm from '../components/NewItemForm';  // Import the NewItemForm component
-import EditItemForm from '../components/EditItemForm';  // Import the EditItemForm component
 import productsData from '../assets/data/products.json';
 
-const Home = () => {
+const Dashboard = () => {
   const [products, setProducts] = useState(productsData);
   const [editingItem, setEditingItem] = useState(null);
 
@@ -45,12 +22,6 @@ const Home = () => {
     setEditingItem(null); // Clear the editing state after updating
   };
 
-  const handleDeleteItem = (id) => {
-    // You can add confirmation and other checks here
-    const updatedProducts = products.filter((item) => item.id !== id);
-    setProducts(updatedProducts);
-  };
-
   const handleStartEditing = (itemId) => {
     const itemToEdit = products.find((item) => item.id === itemId);
     setEditingItem(itemToEdit);
@@ -62,19 +33,15 @@ const Home = () => {
 
   return (
     <div>
-      <h2>Home Page!</h2>
+      <h2>Dashboard</h2>
       <NewItemForm onAdd={handleAddItem} />
       {editingItem ? (
         <EditItemForm item={editingItem} onUpdate={handleEditItem} />
       ) : (
-        <ProductList
-          products={products}
-          onDelete={handleDeleteItem}
-          onEdit={handleStartEditing}
-        />
+        <ProductList products={products} onDelete={(id) => console.log('Delete', id)} onEdit={handleStartEditing} />
       )}
     </div>
   );
 };
 
-export default Home;
+export default Dashboard;
