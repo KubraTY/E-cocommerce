@@ -1,0 +1,30 @@
+.sidebar {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.sidebar li {
+    color: #ecf0f1;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.sidebar li+li {
+    margin-left: 20px;
+}
+
+.sidebar li::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ecf0f1 0%, #ecf0f1 50%, transparent 50%, transparent 100%);
+    transition:  0.3s;
+}
+
+.sidebar li:hover::after {
+    width: 200%;
+}

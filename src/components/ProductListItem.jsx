@@ -1,30 +1,9 @@
-/*import React from 'react';
-import {Link} from "react-router-dom"
-
-const ProductListItem = ({ product, onDelete }) => {
-  return (
-    <li key={product.id}>
-      <div>
-        <h3>{product.title}</h3>
-        <p>{product.description}</p>
-        <p>Price: ${product.price}</p>
-        {product.discountPercentage > 0 ? (
-          <p>Discounted Price: ${product.price - Math.floor(product.price * product.discountPercentage) / 100}</p>
-        ) : null}
-        <Link to={`/item-detail/${product.id}`}>View Details</Link>
-        <button onClick={() => onDelete(product.id)}>Delete</button>
-      </div>
-    </li>
-  );
-};
-
-export default ProductListItem;*/
-
-// 2 version
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import EditItemForm from './EditItemForm'; // Import the EditItemForm component
+import EditItemForm from './EditItemForm';
+import styles from "../components/styles/productListItem.module.css";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { MdOutlineModeEdit } from "react-icons/md";
 
 const ProductListItem = ({ product, onDelete }) => {
   const [editing, setEditing] = useState(false);
@@ -37,24 +16,34 @@ const ProductListItem = ({ product, onDelete }) => {
     setEditing(false);
   };
 
+  console.log(product)
+
   return (
-    <li key={product.id}>
-      <div>
+    <Link to={`/item-detail/${product.id}`} style={{display:'flex', width:'45%'}}>
+      <li key={product.id} className={styles.productListItem}>
         <h3>{product.title}</h3>
-        <p>{product.description}</p>
-        <p>Price: ${product.price}</p>
-        {product.discountPercentage > 0 ? (
-          <p>Discounted Price: ${product.price - Math.floor(product.price * product.discountPercentage) / 100}</p>
-        ) : null}
-        <Link to={`/item-detail/${product.id}`}>View Details</Link>
-        <button onClick={() => onDelete(product.id)}>Delete</button>
-        {editing ? (
-          <EditItemForm item={product} onUpdate={handleCancelEdit} />
-        ) : (
-          <button onClick={handleEdit}>Edit</button>
-        )}
-      </div>
-    </li>
+        <div className={styles.content}>
+          <div className={styles.pic}><img src={`https://i.dummyjson.com/data/products/${product.id}/thumbnail.jpg`} alt="pic1" />
+          </div>
+          <div className={styles.context}>
+            <p className={styles.description}>{product.description}</p>
+            <p className={styles.price}>Price: ${product.price}</p>
+            {product.discountPercentage > 0 ? (
+              <p className={styles.discounted}>Discounted Price: ${product.price - Math.floor(product.price * product.discountPercentage) / 100}</p>
+            ) : null}
+            <div className={styles.buttons}><button onClick={() => onDelete(product.id)}><FaRegTrashAlt /></button>
+            {editing ? (
+              <EditItemForm item={product} onUpdate={handleCancelEdit} />
+            ) : (
+              <button onClick={handleEdit}><MdOutlineModeEdit /></button>
+            )}</div>
+            
+
+          </div>
+
+        </div>
+      </li>
+    </Link>
   );
 };
 

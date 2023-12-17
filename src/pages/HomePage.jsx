@@ -1,30 +1,7 @@
-/*import React, { useState } from 'react';
-import ProductList from '../components/ProductList';
-import productsData from '../assets/data/products.json';
-
-const Home = () => {
-  const [products, setProducts] = useState(productsData);
-
-  const handleDelete = (id) => {
-    const updatedProducts = products.filter((product) => product.id !== id);
-    setProducts(updatedProducts);
-  };
-
-  return (
-    <div>
-      <h2>Home Page!</h2>
-      <ProductList products={products} onDelete={handleDelete} />
-    </div>
-  );
-};
-
-export default Home;
-*/
-
 import React, { useState } from 'react';
 import ProductList from '../components/ProductList';
-import NewItemForm from '../components/NewItemForm';  // Import the NewItemForm component
-import EditItemForm from '../components/EditItemForm';  // Import the EditItemForm component
+import NewItemForm from '../components/NewItemForm';  
+import EditItemForm from '../components/EditItemForm';
 import productsData from '../assets/data/products.json';
 
 const Home = () => {
@@ -62,8 +39,7 @@ const Home = () => {
 
   return (
     <div>
-      <h2>Home Page!</h2>
-      <NewItemForm onAdd={handleAddItem} />
+     {/*<NewItemForm onAdd={handleAddItem} /> */} 
       {editingItem ? (
         <EditItemForm item={editingItem} onUpdate={handleEditItem} />
       ) : (
