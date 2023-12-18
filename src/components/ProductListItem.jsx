@@ -5,7 +5,7 @@ import styles from "../components/styles/productListItem.module.css";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { MdOutlineModeEdit } from "react-icons/md";
 
-const ProductListItem = ({ product, onDelete }) => {
+const ProductListItem = ({ product, handleDeleteItem, handleEditItem}) => {
   const [editing, setEditing] = useState(false);
 
   const handleEdit = () => {
@@ -18,7 +18,8 @@ const ProductListItem = ({ product, onDelete }) => {
 
  // console.log(product)
 
-  return (
+  return ( 
+    <> 
     <Link to={`/item-detail/${product.id}`} className={styles.link} product={product}>
       <li key={product.id} className={styles.productListItem}>
         <h3>{product.title}</h3>
@@ -31,12 +32,7 @@ const ProductListItem = ({ product, onDelete }) => {
             {product.discountPercentage > 0 ? (
               <p className={styles.discounted}>Discounted Price: ${product.price - Math.floor(product.price * product.discountPercentage) / 100}</p>
             ) : null}
-            <div className={styles.buttons}><button onClick={() => onDelete(product.id)}><FaRegTrashAlt /></button>
-            {editing ? (
-              <EditItemForm item={product} onUpdate={handleCancelEdit} />
-            ) : (
-              <button onClick={handleEdit}><MdOutlineModeEdit /></button>
-            )}</div>
+            
             
 
           </div>
@@ -44,7 +40,14 @@ const ProductListItem = ({ product, onDelete }) => {
         </div>
       </li>
     </Link>
-  );
+      <div className={styles.buttons}><button onClick={() => handleDeleteItem(product.id)}><FaRegTrashAlt /></button>
+              {editing ? (
+                <EditItemForm item={product} onUpdate={handleCancelEdit} handleEditItem= {handleEditItem}  />
+              ) : (
+                <button onClick={handleEdit}><MdOutlineModeEdit /></button>
+              
+              )}</div>
+              </>);
 };
 
 export default ProductListItem;

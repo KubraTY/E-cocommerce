@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const EditItemForm = ({ item, onUpdate }) => {
+const EditItemForm = ({ item, handleEditItem }) => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -25,12 +25,14 @@ const EditItemForm = ({ item, onUpdate }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData)
     // You can add validation here before updating the item
-    onUpdate({ ...item, ...formData });
+    handleEditItem({...formData, images: item.images, id: item.id });
   };
 
   return (
     <form onSubmit={handleSubmit}>
+
       <label>
         Title:
         <input type="text" name="title" value={formData.title} onChange={handleChange} required />

@@ -4,29 +4,12 @@ import NewItemForm from '../components/NewItemForm';
 import EditItemForm from '../components/EditItemForm';
 import productsData from '../assets/data/products.json';
 
-const Home = () => {
-  const [products, setProducts] = useState(productsData);
+  const Home = ({products, handleAddItem, handleEditItem, handleDeleteItem}) => {
   const [editingItem, setEditingItem] = useState(null);
 
-  const handleAddItem = (newItem) => {
-    // You can add validation and other checks here
-    setProducts([...products, { id: Date.now(), ...newItem }]);
-  };
+  
 
-  const handleEditItem = (updatedItem) => {
-    // You can add validation and other checks here
-    const updatedProducts = products.map((item) =>
-      item.id === updatedItem.id ? updatedItem : item
-    );
-    setProducts(updatedProducts);
-    setEditingItem(null); // Clear the editing state after updating
-  };
-
-  const handleDeleteItem = (id) => {
-    // You can add confirmation and other checks here
-    const updatedProducts = products.filter((item) => item.id !== id);
-    setProducts(updatedProducts);
-  };
+  
 
   const handleStartEditing = (itemId) => {
     const itemToEdit = products.find((item) => item.id === itemId);
@@ -39,7 +22,7 @@ const Home = () => {
 
   return (
     <div>
-     <NewItemForm onAdd={handleAddItem} />
+     <NewItemForm handleAddItem={handleAddItem} />
       {editingItem ? (
         <EditItemForm item={editingItem} onUpdate={handleEditItem} />
       ) : (

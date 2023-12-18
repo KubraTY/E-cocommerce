@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styles from '../components/styles/form.module.css'
 
-const NewItemForm = ({ onAdd }) => {
+const NewItemForm = ({ handleAddItem }) => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -17,8 +17,8 @@ const NewItemForm = ({ onAdd }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    onAdd({ ...formData, id: uuidv4() });
+    console.log(formData)
+    handleAddItem({ ...formData, id: uuidv4() });
 
     setFormData({
       title: '',
