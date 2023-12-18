@@ -16,10 +16,10 @@ const ProductListItem = ({ product, onDelete }) => {
     setEditing(false);
   };
 
-  console.log(product)
+ // console.log(product)
 
   return (
-    <Link to={`/item-detail/${product.id}`} style={{display:'flex', width:'45%'}}>
+    <Link to={`/item-detail/${product.id}`} style={{display:'flex', width:'45%'}} product={product}>
       <li key={product.id} className={styles.productListItem}>
         <h3>{product.title}</h3>
         <div className={styles.content}>

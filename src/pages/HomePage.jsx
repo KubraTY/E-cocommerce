@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <div>
-     {/*<NewItemForm onAdd={handleAddItem} /> */} 
+     <NewItemForm onAdd={handleAddItem} />
       {editingItem ? (
         <EditItemForm item={editingItem} onUpdate={handleEditItem} />
       ) : (

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import styles from '../components/styles/form.module.css'
 
 const NewItemForm = ({ onAdd }) => {
   const [formData, setFormData] = useState({
@@ -15,9 +17,9 @@ const NewItemForm = ({ onAdd }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add validation here before adding the item
-    onAdd(formData);
-    // Reset the form after submission
+
+    onAdd({ ...formData, id: uuidv4() });
+
     setFormData({
       title: '',
       description: '',
@@ -27,18 +29,35 @@ const NewItemForm = ({ onAdd }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <label>
         Title:
-        <input type="text" name="title" value={formData.title} onChange={handleChange} required />
+        <input
+          type="text"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          required
+        />
       </label>
       <label>
         Description:
-        <textarea name="description" value={formData.description} onChange={handleChange} required />
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          required
+        />
       </label>
       <label>
         Price:
-        <input type="number" name="price" value={formData.price} onChange={handleChange} required />
+        <input
+          type="number"
+          name="price"
+          value={formData.price}
+          onChange={handleChange}
+          required
+        />
       </label>
       <label>
         Discount Percentage:

@@ -4,16 +4,20 @@ import productsData from '../assets/data/products.json';
 import { useParams } from 'react-router-dom';
 
 const ItemDetailPage = () => {
+  const { id } = useParams();
+  const productId = parseInt(id, 10);
+  const product = productsData.find((p) => p.id === productId);
 
-    
-    const { id } = useParams();
-  
-    const product = productsData.find((p) => p.id === parseInt(id, 10));
+  console.log(product)
 
   return (
     <div>
       <h2>Product Details</h2>
-      <ProductListItem product={product} />
+      {product ? (
+        <ProductListItem product={product} />
+      ) : (
+        <p>Product not found</p>
+      )}
     </div>
   );
 };
