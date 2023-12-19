@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const EditItemForm = ({ item, handleEditItem }) => {
+const EditItemForm = ({ item, handleEditItem ,onUpdate}) => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -27,6 +27,7 @@ const EditItemForm = ({ item, handleEditItem }) => {
     e.preventDefault();
     console.log(formData)
     // You can add validation here before updating the item
+    onUpdate()
     handleEditItem({...formData, images: item.images, id: item.id });
   };
 

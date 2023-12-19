@@ -10,11 +10,13 @@ import NotFoundPage from './pages/NotFoundPage';
 import ItemDetailPage from './pages/ItemDetailsPage';
 import { Route, Routes } from 'react-router-dom';
 import JSON from "./assets/data/products.json"
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
 
-
   const [products, setProducts] = useState(JSON)
+  const navigate = useNavigate();
+
   const handleAddItem = (newItem) => { 
   const copy= products.map(product=> product)
   copy.push({...newItem})
@@ -38,9 +40,10 @@ const App = () => {
   };
 
   const handleDeleteItem = (id) => {
-    // You can add confirmation and other checks here
+    
     const updatedProducts = products.filter((item) => item.id !== id);
     setProducts(updatedProducts);
+    navigate('/');
   };
 
 

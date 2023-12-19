@@ -5,7 +5,7 @@ const ProductList = ({ products, onDelete , onEdit}) => {
   return (
     <ul  style={{display:'flex', flexWrap:'wrap', gap:20 }}>
       {products.map((product) => (
-        <ProductListItem key={product.id} product={product} onDelete={onDelete} onEdit={onEdit}/>
+        <ProductListItem key={product.id} product={product} onDelete={onDelete} onEdit={onEdit}showButtons={false} />
       ))}
     </ul>
   );

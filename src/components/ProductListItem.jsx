@@ -5,12 +5,11 @@ import styles from "../components/styles/productListItem.module.css";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { MdOutlineModeEdit } from "react-icons/md";
 
-const ProductListItem = ({ product, onDelete, onEdit }) => {
+const ProductListItem = ({ product, onDelete, handleEditItem, showButtons = true }) => {
   const [editing, setEditing] = useState(false);
   const navigate = useNavigate();
 
-  const handleEdit = (e) => {
-    e.stopPropagation();
+  const handleEdit = () => {
     setEditing(true);
   };
 
@@ -23,7 +22,6 @@ const ProductListItem = ({ product, onDelete, onEdit }) => {
   };
 
   const handleDeleteClick = (e) => {
-    // Stop the propagation to prevent navigation
     e.stopPropagation();
     onDelete(product.id);
   };
@@ -38,16 +36,18 @@ const ProductListItem = ({ product, onDelete, onEdit }) => {
             <p className={styles.description}>{product.description}</p>
             <p className={styles.price}>Price: ${product.price}</p>
             {product.discountPercentage > 0 && (
-              <p className={styles.discounted}>Discounted Price: ${product.price - Math.floor(product.price * product.discountPercentage) / 100}</p>
+              <p className={styles.discounted}>Discounted Price: ${(product.price - ((product.price * product.discountPercentage)) / 100).toFixed(2)}</p>
             )}
-            <div className={styles.buttons}>
-              <button onClick={handleDeleteClick}><FaRegTrashAlt /></button>
-              {editing ? (
-                <EditItemForm item={product} onUpdate={handleCancelEdit} handleEditItem={onEdit} />
-              ) : (
-                <button onClick={handleEdit}><MdOutlineModeEdit /></button>
-              )}
-            </div>
+            {showButtons && (
+              <div className={styles.buttons}>
+                <button onClick={handleDeleteClick}><FaRegTrashAlt /></button>
+                {editing ? (
+                  <EditItemForm item={product} onUpdate={handleCancelEdit} handleEditItem={handleEditItem} />
+                ) : (
+                  <button onClick={handleEdit}><MdOutlineModeEdit /></button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </li>
