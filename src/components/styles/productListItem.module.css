@@ -13,12 +13,8 @@
     border: solid 2px;
     border-color: #87919a ;
     border-radius: 16px;
-    padding: 20px;
     background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+
 
 }
 h3{

@@ -48,16 +48,16 @@ const App = () => {
 
 
   return (
-    <div className="app-container">
+    <div className='app-container'>
       <div className="header">
         <Navbar />
         <Sidebar />
       </div>
       <div className="page-content">
         <Routes>
-          <Route path="/" element={<Home products= {products} handleAddItem= {handleAddItem} handleDeleteItem={handleDeleteItem } handleEditItem={handleEditItem} />} />
-          <Route path="/dashboard" element={<Dashboard products= {products} handleAddItem= {handleAddItem } handleEditItem={handleEditItem} />} /> 
-          <Route path="/item-detail/:id" element={<ItemDetailPage products= {products} handleAddItem= {handleAddItem} handleDeleteItem={handleDeleteItem } handleEditItem={handleEditItem} />} />
+          <Route path="/" element={<Home products={products} handleAddItem={handleAddItem} handleDeleteItem={handleDeleteItem} handleEditItem={handleEditItem} />} />
+          <Route path="/dashboard" element={<Dashboard products={products} handleAddItem={handleAddItem} handleEditItem={handleEditItem} />} />
+          <Route path="/item-detail/:id" element={<ItemDetailPage products={products} handleAddItem={handleAddItem} handleDeleteItem={handleDeleteItem} handleEditItem={handleEditItem} />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

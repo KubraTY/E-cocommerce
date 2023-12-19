@@ -18,6 +18,12 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+html{
+height: 100%;
+}
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -78,4 +84,27 @@ button{
 
 .page-content{
 	padding-inline:80px;
+}
+
+
+.productStyle{
+		display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    grid-gap: 1em;
+		height: 100vh;
+
+}
+
+.app-container {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex-grow: 1;
+}
+
+.footer-wrap {
+  margin-top:auto;
 }
