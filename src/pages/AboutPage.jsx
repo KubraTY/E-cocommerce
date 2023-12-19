@@ -14,7 +14,7 @@ const AboutPage = () => {
             GitHub
           </a>{' '}
           |{' '}
-          <a href="www.linkedin.com/in/kubra-tokgozlu" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/kubra-tokgozlu/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
         </li>
