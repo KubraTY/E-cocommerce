@@ -10,7 +10,6 @@ const ItemDetailPage = ({products, handleDeleteItem, handleAddItem, handleEditIt
 
   return (
     <div>
-      <h2>Product Details</h2>
       {product ? (
         <ProductListItem product={product} handleDeleteItem= {handleDeleteItem} handleAddItem = {handleAddItem} handleEditItem= {handleEditItem}  onDelete={handleDeleteItem}  />
       ) : (

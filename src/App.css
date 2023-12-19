@@ -63,11 +63,6 @@ button{
 	color: #f39c12 ;
 }
 
-.app-container{
-	position: relative;
-}
-
-
 .header{
 	position: sticky;
 	top: 0;
@@ -84,27 +79,41 @@ button{
 
 .page-content{
 	padding-inline:80px;
+	padding-bottom: 80px;
 }
 
 
 .productStyle{
-		display: grid;
+	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
     grid-gap: 1em;
-		height: 100vh;
-
 }
 
 .app-container {
-  min-height: 100vh; 
   display: flex;
   flex-direction: column;
+
 }
 
-.page-content {
-  flex-grow: 1;
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 0px;
+	background-color: #4caf50;
+	color: white;
+	margin-top: 50px;
 }
-
-.footer-wrap {
-  margin-top:auto;
+footer * {
+	padding-left: 10px;
+}
+div#root{
+	position: relative;
+	min-height: 100vh;
+}
+footer a:hover{
+	cursor:pointer;
+	color: #3498db;
 }
