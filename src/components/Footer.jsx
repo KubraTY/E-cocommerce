@@ -5,7 +5,7 @@ const Footer = () => {
     <> 
       <footer>
       <p>&copy; 2023 My React App</p>
-      <a href="https://github.com/your-username/your-react-app" target="_blank" rel="noopener noreferrer">
+      <a href="https://kubraty.github.io/E-cocommerce/" target="_blank" rel="noopener noreferrer">
         GitHub Repository
       </a>
     </footer>
