@@ -11,33 +11,35 @@ Serving as a showcase for their acquired skills and knowledge, Co-commerce guara
 
 To get started with Ironhack Marketplace, follow the instructions below:
 
-1.Clone the repository to your local machine.
-2.Install the required dependencies with npm install.
-3. Start the application with npm run dev and visit http://localhost:3000 in your browser.
-4. Explore the marketplace and enjoy the features!
+- Clone the repository to your local machine.
+- Install the required dependencies with npm install.
+- Start the application with npm run dev and visit http://localhost:3000 in your browser.
+- Explore the marketplace and enjoy the features!
 
 
 **Features** 
 
-Navbar - A component that displays the name and the logo of the app, shown on all the pages.
+- Navbar - A component that displays the name and the logo of the app, shown on all the pages.
 
-Footer - A component that displays a link to the GitHub repo of the project, shown on all the pages.
+- Footer - A component that displays a link to the GitHub repo of the project, shown on all the pages.
 
-Sidebar - A sidebar component shown on all the pages. The component should display links to pages added to the app at a later stage.
+- Sidebar - A sidebar component shown on all the pages. The component should display links to pages added to the app at a later stage.
 
-Items List - A list of items showing the JSON data.
+- Items List - A list of items showing the JSON data.
 
-Conditional Rendering - Conditionally render content using boolean properties from the project’s JSON data.
+- Conditional Rendering - Conditionally render content using boolean properties from the project’s JSON data.
 
-Delete Items - A button on each list item that allows the user to delete the item from the list.
+- Delete Items - A button on each list item that allows the user to delete the item from the list.
 
-Item Details Page - A page showing the details of the selected item from the list of items.
-About Page - A page showing the project description and information about the team members (students) working on the project, including links to their GitHub and LinkedIn profiles.
-Not Found Page - A page shown whenever the user navigates to a URL route that doesn’t exist in the app.
+- Item Details Page - A page showing the details of the selected item from the list of items.
+  
+- About Page - A page showing the project description and information about the team members (students) working on the project, including links to their GitHub and LinkedIn profiles.
 
-Create Item Form - A form that allows the user to create a new item and add it to the items list.
+- Not Found Page - A page shown whenever the user navigates to a URL route that doesn’t exist in the app.
 
-Update Item Form - A form that allows the user to update an existing item on the list.
+- Create Item Form - A form that allows the user to create a new item and add it to the items list.
+
+- Update Item Form - A form that allows the user to update an existing item on the list.
 
 
 
@@ -45,42 +47,41 @@ Update Item Form - A form that allows the user to update an existing item on the
 
 The technological foundation of the Co-commerce encompasses a diverse array of cutting-edge tools, fostering the creation of a resilient and scalable application. The following catalog details the pivotal technologies integral to our project:
 
-Frontend
-React:
+- React:
 Our application's dynamic and responsive user interface is crafted using React, an influential JavaScript library renowned for constructing interactive UIs. The component-based structure of React enhances code reusability and facilitates streamlined maintenance.
 
-React Router:
+- React Router:
 Efficient navigation and seamless route handling within our single-page application are orchestrated through React Router. This empowers us to deliver an optimal and fluid user navigation experience.
 
-PropTypes:
+- PropTypes:
 Employed for type-checking component props, PropTypes ensures that our components receive accurate and consistent data, fortifying the reliability of our application.
 
-CSS3 and HTML5:
+- CSS3 and HTML5:
 These foundational technologies contribute to the design and structure of our web pages, bestowing an appealing and user-friendly interface.
 
-State Management and Data Handling
+- State Management and Data Handling
 useState and useEffect Hooks:
 Instrumental React hooks that proficiently manage state and orchestrate lifecycle events within our functional components.
 
-UUID:
+- UUID:
 The 'uuid' library plays a crucial role in generating unique identifiers, particularly beneficial for assigning distinct IDs to new product entries.
 
-Forms and Data Submission
+- Forms and Data Submission
 Form Handling:
 Our application incorporates advanced form-handling mechanisms, ensuring a smooth and intuitive user experience during the addition and update of product data.
 
-Images and Media
+- Images and Media
 Image Handling:
 Efficient management and presentation of images associated with products augment the visual allure and informativeness of our product listings.
 
-Development Tools and Practices
+- Development Tools and Practices
 ESLint/Prettier:
 Integral tools in our development toolkit, ESLint and Prettier uphold code quality and consistency throughout the entirety of our project.
 
-Git and GitHub:
+- Git and GitHub:
 Our chosen version control system, Git and GitHub facilitate efficient collaboration and streamlined code management.
 
-Responsive Web Design:
+- Responsive Web Design:
 Adhering to responsive design principles ensures the accessibility and functionality of our application across diverse devices and screen sizes.
 
 
@@ -171,19 +172,19 @@ The Coco-commerce project is structured to ensure ease of development and mainte
 
 This structure reflects our commitment to a clean and organized codebase. Here’s a brief overview of the key components:
 
-node_modules: Contains all the npm packages required for the project.
-public: Stores static files like the main index.html.
-src: The primary directory where our application's source code resides.
-assets: Holds reusable components, images, and pages.
-components: React components like Navbar, ProductForm, etc.
-images: Images used throughout the application.
-pages: React components representing different pages of the application.
-style: CSS files for styling components and pages.
-.eslintrc.cjs: Configuration file for ESLint to enforce coding styles.
-.gitignore: Specifies intentionally untracked files to ignore.
-package-lock.json & package.json: NPM configuration files with project metadata and dependencies.
-products.json: Contains mock data for products (if used).
-README.md: The markdown file with project information.
-vite.config.js: Configuration file for Vite, the build tool.
+- node_modules: Contains all the npm packages required for the project.
+- public: Stores static files like the main index.html.
+- src: The primary directory where our application's source code resides.
+- assets: Holds reusable components, images, and pages.
+- components: React components like Navbar, ProductForm, etc.
+- images: Images used throughout the application.
+- pages: React components representing different pages of the application.
+- style: CSS files for styling components and pages.
+- .eslintrc.cjs: Configuration file for ESLint to enforce coding styles.
+- .gitignore: Specifies intentionally untracked files to ignore.
+- package-lock.json & package.json: NPM configuration files with project metadata and dependencies.
+- products.json: Contains mock data for products (if used).
+- README.md: The markdown file with project information.
+- vite.config.js: Configuration file for Vite, the build tool.
 
 
