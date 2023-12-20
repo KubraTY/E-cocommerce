@@ -206,7 +206,8 @@ This structure reflects our commitment to a clean and organized codebase. Here�
 
  - Victor Silva
  
-  I was born in Brazil but came to Portugal when I was five years old, since then I have lived   in Lisbon. I have a background in Management, but I have always been interested in         
+  I was born in Brazil but came to Portugal when I was five years old, since then I have lived   in Lisbon. I have a background in Management, but I have always 
+  been interested in         
   technology, which is why I decided not to pursue the area of ​​economics. I really like       
   playing football and playing computer games.
 
