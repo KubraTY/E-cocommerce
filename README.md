@@ -110,7 +110,7 @@ Adhering to responsive design principles ensures the accessibility and functiona
   Allow users to create wishlists or save items for future purchase.
   Implement notifications for price drops on wishlisted items.
 
- Responsive Customer Support:
+ - Responsive Customer Support:
 
   Integrate a live chat or messaging system for customer support.
   Provide a comprehensive FAQ section to address common queries.
@@ -168,6 +168,8 @@ Adhering to responsive design principles ensures the accessibility and functiona
 
 
 **Project Structure**
+
+
 The Coco-commerce project is structured to ensure ease of development and maintenance. Here's a breakdown of the key directories and files in our project:
 
 This structure reflects our commitment to a clean and organized codebase. Here’s a brief overview of the key components:
