@@ -167,10 +167,15 @@ Adhering to responsive design principles ensures the accessibility and functiona
 
 
 
+
+
+
 **Project Structure**
 
 
+
 The Coco-commerce project is structured to ensure ease of development and maintenance. Here's a breakdown of the key directories and files in our project:
+
 
 This structure reflects our commitment to a clean and organized codebase. Here’s a brief overview of the key components:
 
@@ -188,5 +193,22 @@ This structure reflects our commitment to a clean and organized codebase. Here�
 - products.json: Contains mock data for products (if used).
 - README.md: The markdown file with project information.
 - vite.config.js: Configuration file for Vite, the build tool.
+
+
+**Made By:**
+
+- Kubra Tokgozlu
+
+  I'm a Turkish native with a background in mathematics. Transitioning to IT, I've found       
+  excitement in problem-solving and coding. Family time is my greatest joy, and come summer, 
+  you'll catch me swimming in the Mediterranean. Join me in this journey where family, IT 
+  challenges, and seaside adventures intertwine.
+
+  - Victor Silva
+ 
+  I was born in Brazil but came to Portugal when I was five years old, since then I have lived   in Lisbon. I have a background in Management, but I have always been interested in         
+  technology, which is why I decided not to pursue the area of ​​economics. I really like       
+  playing football and playing computer games.
+
 
 
